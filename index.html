@@ -3,11 +3,37 @@
 <head>
     <title>Solara Translator</title>
 </head>
+    <style>
+body {
+    background-color: black;
+    color: lime;
+    font-family: monospace;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    background-color: #111;
+    color: lime;
+    border: 1px solid lime;
+    padding: 10px;
+}
+
+button {
+    background-color: lime;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 <body>
 
 <h2>Caputformain/Solara Translator</h2>
 
-<textarea id="input" rows="6" cols="50" placeholder="Type here..."></textarea>
+<textarea id="input" rows="6" cols="50" placeholder="Type in English here..."></textarea>
 <br><br>
 
 <button onclick="run()">Translate</button>
