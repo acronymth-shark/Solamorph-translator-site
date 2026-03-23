@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Solara Translator</title>
+  <head>
 
+<p class="credit">☆Neri Orit⟡</p>
+    <title>
+      Solara Translator
+    </title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    
+    
     <style>
-    body {
-        background-color: black;
-        color: rgb(0, 110, 255);
-        font-family: 'Orbitron', sans-serif;
+      body {
+        background-color: rgb(255, 140, 97);
+        color: white;
+        font-family: "Fascinate", system-ui;
         padding: 20px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
     }
+    
 
     h2 {
         margin-bottom: 10px;
     }
 
     textarea {
-        background-color: #111;
-        color: rgb(0, 110, 255);
-        border: 1px solid lime;
+        background-color: #0;
+        color: rgb(255, 140, 97);
+        border: 1px white;
         padding: 10px;
     }
 
     button {
-        background-color: lime;
-        color: black;
+        background-color: white;
+        color: rgb(255, 140, 97);
         padding: 10px;
         border: none;
         cursor: pointer;
         margin-top: 10px;
     }
+    .about {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 30px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 1;
+    margin-bottom: 5px;
+}
+    #output {
+font-family: 'Quicksand', sans-serif;
+font-size: 20px;
+margin-top: 15px;
+}
     </style>
 </head>
-
+  
 <body>
-
-<h2>Caputformain/Solara Translator</h2>
-
-<textarea id="input" rows="6" cols="50" placeholder="Type in English here..."></textarea>
-<br><br>
-
+      
+<h2> Caputformain/Solara Translator</h2>
+    
+<textarea id="input" rows="9" cols="40" placeholder="Type in English here..."></textarea>
+<br /><br />
+    
 <button onclick="run()">Translate</button>
-
+    
 <p id="output"></p>
 
 <script>
 const translator = {
     "i": "Ani",
-    "caputforman": "Morf'ka", // ✅ lowercase + comma added
+    "caputforman": "Morf’ka",
     "eat": "munz",
     "apple": "sena",
     "you": "teka",
     "hello": "berakhet",
     "hi": "berak",
-    "yes": "ya'e",
+    "yes": "ya’e",
     "no": "nehk",
     "goodbye": "berakhete",
     "bye": "ete",
@@ -177,7 +200,19 @@ function run() {
     let input = document.getElementById("input").value;
     document.getElementById("output").innerText = translateSentence(input);
 }
-</script>
-
-</body>
+    </script>
+    
+<div class="about">
+  <h3>About the Translator</h3>
+  <p>
+    This translator converts English into the fictional Caputformain/Solara language.
+    It replaces words and suffixes while keeping English sentence structure.
+    Created for a personal story project.
+  </p>
+  
+</div>
+  </body>
+  
 </html>
+
+
