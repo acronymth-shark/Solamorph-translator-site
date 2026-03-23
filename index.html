@@ -2,34 +2,40 @@
 <html>
 <head>
     <title>Solara Translator</title>
-</head>
+
+    
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
     <style>
-body {
-    background-color: black;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    padding: 20px;
-}
+    body {
+        background-color: black;
+        color: rgb(0, 110, 255);
+        font-family: 'Orbitron', sans-serif;
+        padding: 20px;
+    }
 
-h2 {
-    margin-bottom: 10px;
-}
+    h2 {
+        margin-bottom: 10px;
+    }
 
-textarea {
-    background-color: #111;
-    color: white;
-    border: 1px solid lime;
-    padding: 10px;
-}
+    textarea {
+        background-color: #111;
+        color: rgb(0, 110, 255);
+        border: 1px solid lime;
+        padding: 10px;
+    }
 
-button {
-    background-color: lime;
-    color: black;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+    button {
+        background-color: lime;
+        color: black;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+
 <body>
 
 <h2>Caputformain/Solara Translator</h2>
@@ -43,8 +49,8 @@ button {
 
 <script>
 const translator = {
-  "i": "Ani",
-    "Caputforman": "Morf'ka"
+    "i": "Ani",
+    "caputforman": "Morf'ka", // ✅ lowercase + comma added
     "eat": "munz",
     "apple": "sena",
     "you": "teka",
@@ -89,7 +95,6 @@ const translator = {
     "help": "azerra",
     "hate": "haten",
     "not": "net",
-    "faggot": "zeebert",
     "that": "das",
     "saw": "vis",
     "seen": "vis",
@@ -107,7 +112,7 @@ const translator = {
     "eight": "ach",
     "nine": "neven",
     "ten": "ba",
-    "chapter": "verith",
+    "chapter": "verith"
 };
 
 const suffixes = {
@@ -115,8 +120,7 @@ const suffixes = {
     "ed": "et",
     "s": "ar",
     "'s": "at",
-    "self": "vem",
-
+    "self": "vem"
 };
 
 const exceptions = {
@@ -166,8 +170,7 @@ function translateWord(word) {
 }
 
 function translateSentence(sentence) {
-    let words = sentence.split(" ");
-    return words.map(w => translateWord(w)).join(" ");
+    return sentence.split(" ").map(w => translateWord(w)).join(" ");
 }
 
 function run() {
